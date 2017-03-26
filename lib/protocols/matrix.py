@@ -72,7 +72,7 @@ class Matrix(threading.Thread, Library):
         self.__rooms = self.loader.request_library("rooms", "rooms")
         self.__commands = self.loader.request_library("commands", "commands")
 
-        self.__matrix_cfg = self.config.get_temp_value("app_config")["matrix"]
+        self.__matrix_cfg = self.config.get_temp_value("matrix")
 
         # API URL to which messages will be pushed.
         self.__msg_api_url = self.__matrix_cfg["api_url"] + "/rooms/{0}/send/m.room.message"
